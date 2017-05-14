@@ -1,0 +1,52 @@
+/* Navbar */
+.navbar-default
+{
+	background-color: #34495E;
+	border-color: #222427;
+	border-bottom-width: 0;
+	box-shadow: 0 -3px #222427 inset;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form
+{
+	border-bottom-width: 0;
+	border-color: #222427;
+}
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand
+{
+	color: #FFF;
+	font-weight: bold;
+	font-family: "Segoe UI";
+	text-shadow: 0 2px #1b1c1e;
+	font-size: 1em;
+	text-decoration:none;
+}
+.dropdown-menu
+{
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+	text-decoration:none;
+}
+.dropdown-menu > li > a
+{
+	text-decoration:none;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus
+{
+	color: #FFF;
+	background-color: #366D9D;
+	box-shadow: 0 -3px #272d35 inset;
+}
+@media (max-width: 768px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a
+	{
+		color: #FFF;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus
+	{
+		color: #FFF;
+		background-color: #2a3038;
+		box-shadow: 0 -3px #272d35 inset;
+	}
+}
