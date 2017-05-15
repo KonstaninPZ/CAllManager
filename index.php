@@ -6,23 +6,22 @@ setcookie('userID', '', -1, '/');
 setcookie('email', '', -1, '/');
 if(!isset($_COOKIE['userID'])){
    
-   // echo 'aaaas';
+   
     if(isset($_POST['submit'])) {
-       // echo dbc();
+     
         $userEmail = mysqli_real_escape_string(Connection::dbc(), trim($_POST['userEmail']));
-//     echo 'aaaa';
+
         $userPassword = mysqli_real_escape_string(Connection::dbc($db_name), trim($_POST['userPassword']));
         if(!empty($userEmail) && !empty($userPassword)){
             $query = "SELECT * FROM `userManager`   WHERE email='$userEmail' "
                     . "AND password='$userPassword'";
             $data = mysqli_query(Connection::dbc(), $query);
-//            print_r($data);
-        //    echo 'aaaasss';
+        
             if (mysqli_num_rows($data)==1 ){
                 $row = mysqli_fetch_assoc($data);
                 setcookie('userID', $row['userID'], time() + (60*60*24*30));
 		setcookie('email', $row['email'], time() + (60*60*24*30));
-//                echo 'aaaa';
+
                 $work_Page_url='http://'.$_SERVER['HTTP_HOST'].'/CallManager2/workPage.php';
 
                 header('Location: '. $work_Page_url);
