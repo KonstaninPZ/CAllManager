@@ -10,7 +10,7 @@ if(!isset($_COOKIE['userID'])){
     if(isset($_POST['submit'])) {
        // echo dbc();
         $userEmail = mysqli_real_escape_string(Connection::dbc(), trim($_POST['userEmail']));
-     echo 'aaaa';
+//     echo 'aaaa';
         $userPassword = mysqli_real_escape_string(Connection::dbc($db_name), trim($_POST['userPassword']));
         if(!empty($userEmail) && !empty($userPassword)){
             $query = "SELECT * FROM `userManager`   WHERE email='$userEmail' "
@@ -22,8 +22,8 @@ if(!isset($_COOKIE['userID'])){
                 $row = mysqli_fetch_assoc($data);
                 setcookie('userID', $row['userID'], time() + (60*60*24*30));
 		setcookie('email', $row['email'], time() + (60*60*24*30));
-                echo 'aaaa';
-                $work_Page_url='http://'.$_SERVER['HTTP_HOST'].'/php.rus/CallManager2/workPage.php';
+//                echo 'aaaa';
+                $work_Page_url='http://'.$_SERVER['HTTP_HOST'].'/CallManager2/workPage.php';
 
                 header('Location: '. $work_Page_url);
                 
@@ -38,11 +38,7 @@ if(!isset($_COOKIE['userID'])){
 }
 ?>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
          <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,16 +48,16 @@ and open the template in the editor.
         <link href="css/bootstrap.css" rel="stylesheet">
     </head>
     <body>
-<!--       <img src="./images/valknut.png" class="img-responsive" alt="Responsive image">-->
-        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>" class="form-horizontal" role="form">
+
+        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>" class="form-horizontal" role="form" id="form_author">
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+<!--        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>-->
         <div class="col-sm-10">
             <input name="userEmail" type="email" class="form-control" id="inputEmail3" placeholder="Email">
         </div>
       </div>
       <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Пароль</label>
+<!--        <label for="inputPassword3" class="col-sm-2 control-label">Пароль</label>-->
         <div class="col-sm-10">
             <input name="userPassword" type="password" class="form-control" id="inputPassword3" placeholder="Password">
         </div>

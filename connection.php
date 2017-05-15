@@ -1,7 +1,7 @@
 <?php
     define(host,'localhost');
     define(user,'root');
-    define(password,'prosto2plus2');
+    define(password,'fakultet');
 //        $db_name='CallManager';
 //     $dbc = mysqli_connect(host, user,password ,$db_name )
 //            or die("Not coonect");
@@ -15,7 +15,7 @@ class Connection{
         return $dbc;
     }
     public static function link(){
-        $link=mysqli_connect(host, user,password  )
+        $link=mysqli_connect(host, user, password  )
             or die("Not coonect dbc1");
         return $link;
     }
