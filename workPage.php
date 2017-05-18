@@ -49,7 +49,7 @@
                          ?>
                          
                      </div> 
-                     <div>вторая вкладка<br>
+                     <div >вторая вкладка<br>
                           <?php 
                             include './content.php';
                           ?>
@@ -60,7 +60,7 @@
                           ?>
                      </div>
                     <div>Четвертая вкладка<br>
-                        <form  method="post" action="Table.php">
+                        <form  method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
                         <input type="text" id="member" name="member" value="">Количество вопросов в анкете: (max. 10)<br />
                         <a href="#" id="filldetails" onclick="addFields()">Генерировать поля</a>
                         <div id="container"/>

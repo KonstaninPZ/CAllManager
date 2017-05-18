@@ -1,7 +1,7 @@
 <?php
     define(host,'localhost');
     define(user,'root');
-    define(password,'fakultet');
+    define(password,'prosto2plus2');
 //        $db_name='CallManager';
 //     $dbc = mysqli_connect(host, user,password ,$db_name )
 //            or die("Not coonect");

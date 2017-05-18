@@ -30,8 +30,11 @@ class Table {
             echo '<br>Таблицы:<br>';
          while ($row = mysqli_fetch_array($res)) { // массив с данными
             echo "<p> <a href='?id_table={$row[0]}'>{$row[0]}"
-             . "</a><br></p>";
-           if(!isset($_GET['id_db']))  Table::ShowTab();
+             . "</a><br></p><script type=\"text/javascript\">showTabTables();</script>
+";
+           if(!isset($_GET['id_db'])) 
+               Table::ShowTab();
+          
     }
     }
     public static function DeleteTab($param) {

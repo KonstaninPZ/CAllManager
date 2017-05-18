@@ -8,7 +8,8 @@
          $rs = mysqli_query(Connection::dbc(), "SELECT * FROM ".$_GET['id_table']."")
                  or die("rs error"); //запрос на выборку данных и выбраной таблицы
     ?>
-     <table class="table table-bordered">
+     <table class="table table-bordered
+            
           <?php
     while($row_rs = mysqli_fetch_assoc($headTable)) // массив с данными
     {
